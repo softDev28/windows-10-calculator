@@ -1,0 +1,69 @@
+#mathCalculator {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+#inputContainer {
+    display: flex;
+    justify-content: end;
+}
+
+#resultContainer {
+    display: flex;
+    justify-content: end;
+    font-size: 42px;
+    font-weight: bold;
+    margin: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    text-align: end;
+    width: 282px;
+}
+
+::placeholder {
+    color: #000000;
+}
+
+.mathCalculatorContentWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.specialMathematicalSymbol {
+    width: 100%;
+    padding: 18px;
+    background: #F0F0F0;
+    border: 1.5px solid #E6E6E6;
+    font-size: 15.5px;
+}
+
+.specialMathematicalSymbol:hover {
+    background: #D1D1D1;
+}
+
+.numberKeypad {
+    background: #FAFAFA;
+    font-weight: bold;
+}
+
+#equalsButton {
+    background: #8ABAE0;
+}
+
+#equalsButton:hover {
+    background: #4699DB;
+}
+
+/*Desktop Approach*/
+@media (min-width: 1126px) {
+    .specialMathematicalSymbol {
+        width: 100%;
+        height: 40px;
+        display: grid;
+        place-content: center;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover"/>
+  <meta name="color-scheme" content="light dark"/>
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Supple toolkit for building web-based mobile app user interface."/>
+  <link rel="icon" href="../public/assets/icon/electron.ico" type="image/x-icon"/>
+  <link rel="stylesheet" type="text/css" href="../public/src/css/preloader.css"/>
+  <link rel="stylesheet" type="text/css" href="../public/src/css/icon.css"/>
+  <link rel="stylesheet" type="text/css" href="../public/src/css/app.css"/>
+  <link rel="stylesheet" type="text/css" href="../public/src/css/content.css"/>
+  <title>Calculator</title>
+  <script defer src="../public/src/js/jquery.js"></script>
+</head>
+<body id="app">
+  <!--HOME APP BAR-->
+  <div id="homeAppBarWrapper">
+    <div id="homeAppBarMainContainer">
+      <div id="homeAppBarLeftContainer">
+        <i id="bars" class="fal fa-bars" data-toggle="tooltip" title="Open Navigation"></i>
+        <p id="homeAppTitle">Standard</p>
+      </div>
+    </div>
+  </div>
+  <!--CALCULATOR-->
+  <div id="mathCalculator">
+    <div id="inputContainer">
+     <input readonly id="resultContainer" type="text" placeholder="0">
+    </div>
+     <div id="mathCalculatorContentContainer">
+       <div class="mathCalculatorContentWrapper">
+         <div onclick="compute('%')" class="specialMathematicalSymbol">%</div>
+         <div onclick="clearInput()" class="specialMathematicalSymbol">CE</div>
+         <div onclick="clearInput()" class="specialMathematicalSymbol">C</div>
+         <div onclick="removeInput()" class="specialMathematicalSymbol"><i class="fal fa-window-close"></i></div>
+       </div>
+       <div class="mathCalculatorContentWrapper">
+         <div class="specialMathematicalSymbol">¹/x</div>
+         <div class="specialMathematicalSymbol">x²</div>
+         <div class="specialMathematicalSymbol"><i class="fal fa-square-root-alt"></i></div>
+         <div onclick="compute('/')" class="specialMathematicalSymbol"><i class="fal fa-divide"></i></div>
+       </div>
+       <div class="mathCalculatorContentWrapper">
+         <div onclick="compute(7)" class="specialMathematicalSymbol numberKeypad">7</div>
+         <div onclick="compute(8)" class="specialMathematicalSymbol numberKeypad">8</div>
+         <div onclick="compute(9)"  class="specialMathematicalSymbol numberKeypad">9</div>
+         <div onclick="compute('*')" class="specialMathematicalSymbol"><i class="fal fa-times"></i></div>
+       </div>
+       <div class="mathCalculatorContentWrapper">
+         <div onclick="compute(4)" class="specialMathematicalSymbol numberKeypad">4</div>
+         <div onclick="compute(5)" class="specialMathematicalSymbol numberKeypad">5</div>
+         <div onclick="compute(6)" class="specialMathematicalSymbol numberKeypad">6</div>
+         <div onclick="compute('-')" class="specialMathematicalSymbol"><i class="fal fa-minus"></i></div>
+       </div>
+       <div class="mathCalculatorContentWrapper">
+         <div onclick="compute(1)" class="specialMathematicalSymbol numberKeypad">1</div>
+         <div onclick="compute(2)" class="specialMathematicalSymbol numberKeypad">2</div>
+         <div onclick="compute(3)" class="specialMathematicalSymbol numberKeypad">3</div>
+         <div onclick="compute('+')" class="specialMathematicalSymbol"><i class="fal fa-plus"></i></div>
+       </div>
+       <div class="mathCalculatorContentWrapper">
+         <div class="specialMathematicalSymbol numberKeypad">+/-</div>
+         <div onclick="compute(0)" class="specialMathematicalSymbol numberKeypad">0</div>
+         <div onclick="compute('.')" class="specialMathematicalSymbol numberKeypad">.</div>
+         <div onclick="calculate()" id="equalsButton" class="specialMathematicalSymbol" ><i class="fal fa-equals"></i></div>
+       </div>
+     </div>
+   </div>
+  <!--SIDE DRAWER-->
+  <div id="sideNavDrawerOverlay"></div>
+  <div id="sideNavDrawer">
+    <div id="sideNavDrawerMainContentContainer">
+      <div id="sideNavDrawerTopContentContainer">
+        <img id="sideNavDrawerImage" loading="lazy" src="../public/assets/img/calculator-png.png" alt="profile" data-toggle="tooltip" title="View Profile">
+        <div id="sideNavDrawerTextContainer">
+          <p id="sideNavDrawerMainText">Allen Casul</p>
+          <p id="sideNavDrawerMainTextDescription">Elise Developer <i class="fas fa-badge-check verifiedUser" data-toggle="tooltip" title="Verified User"></i></p>
+        </div>
+      </div>
+    </div>
+    <hr id="line">
+    <div id="sideNavDrawerBottomContentContainer">
+      <div class="sideNavDrawerBottomMainContentWrapper">
+        <i class="fal fa-calculator sideNavDrawerBottomIcon"></i>
+        <p class="sideNavDrawerBottomText" data-toggle="tooltip" title="Standard">Standard</p>
+      </div>
+      <div class="sideNavDrawerBottomMainContentWrapper">
+        <i class="fal fa-flask-potion sideNavDrawerBottomIcon"></i>
+        <p class="sideNavDrawerBottomText" data-toggle="tooltip" title="Scientific">Scientific</p>
+      </div>
+    </div>
+  </div>
+  <!--PRELOADER-->
+  <div id="preloaderOverlay">
+    <div id="preloaderContainer">
+      <img id="preloader" src="../public/assets/img/calculator-png.png" alt="calculator">
+    </div>
+  </div>
+  <script defer src="../public/src/js/app.js"></script>
+  <script defer src="../public/src/js/calculator.js"></script>
+</body>
+</html>

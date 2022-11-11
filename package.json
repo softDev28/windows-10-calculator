@@ -1,0 +1,41 @@
+{
+  "name": "windows-calculator",
+  "version": "1.0.0",
+  "description": "Windows 10 calculator app",
+  "main": "./public/src/js/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "Electron",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./public/assets/icon/calculator-icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "./public/assets/icon/calculator-icon.ico",
+      "uninstallerIcon": "./public/assets/icon/calculator-icon.ico",
+      "uninstallDisplayName": "calculator-app-uninstaller",
+      "license": "LICENSE.md",
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softDev28/Elise.git"
+  },
+  "author": "Allen Charls Casul",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/softDev28/Elise/issues"
+  },
+  "homepage": "https://github.com/softDev28/Elise#readme",
+  "devDependencies": {
+    "electron": "^21.2.2",
+    "electron-builder": "^23.6.0"
+  }
+}
